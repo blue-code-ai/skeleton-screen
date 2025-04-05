@@ -1,0 +1,121 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+nav{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-bar::before{
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 2dvw;
+    border-radius: 12.5px;
+    background-color: rgb(71, 69, 69);
+    animation: glow-effect 1.5s linear 0s infinite;
+}
+#nav-bar::after{
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 80dvw;
+    left: 10dvw;
+    border-radius: 10px;
+    background-color: rgb(71, 69, 69);
+    animation: glow-effect 1.5s linear 0s infinite;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));
+    gap: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.vid-box{
+    position: relative;
+    border: 1px solid rgba(102, 99, 99, 0.337);
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+}
+.glowing-box{
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+    background-color: rgb(71, 69, 69);
+    animation: glow-effect 1.5s linear 0s infinite;
+}
+.vid-box:hover{
+    background-color: rgb(136, 131, 131);
+}
+
+.text-box {
+    display: grid;
+    padding: 5px;
+    gap: 5px;
+}
+.text-content{
+    position: relative;
+    aspect-ratio: 16/1.5;
+    background-color: rgb(71, 69, 69);
+    border-radius: 10px;
+    z-index: 0;
+}
+.text-content:hover{
+    background-color: rgb(136, 131, 131);
+}
+.boundary{
+    position: relative;
+    aspect-ratio: 16/1.5;
+    border-radius: 10px;
+    z-index: 10;
+    overflow: hidden;
+}
+.boundary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background-color: rgb(162, 157, 157);
+    box-shadow: 3px 0px 8px 10px rgb(162, 157, 157);
+    border-radius: 10px;
+    animation: moving-effect 1.5s linear infinite;
+    z-index: 1;
+}
+/* .moving-effect {
+    position: relative;
+    height: 100%;
+    width: 20px;
+    background-color: rgb(162, 157, 157);
+    box-shadow: 3px 0px 8px 10px rgb(162, 157, 157);
+    border-radius: 10px;
+    z-index: 1;
+    animation: moving-effect 1.5s ease 0s infinite;
+} */
+@keyframes moving-effect {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+    transform: translateX(1000%);
+    }
+}
+@keyframes glow-effect {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
