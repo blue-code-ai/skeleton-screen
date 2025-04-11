@@ -49,7 +49,7 @@ nav{
     border-radius: 10px;
     aspect-ratio: 16/9;
     background-color: rgb(71, 69, 69);
-    animation: glow-effect 1.5s linear 0s infinite;
+    animation: glow-effect 1s linear 0s infinite;
 }
 .vid-box:hover{
     background-color: rgb(136, 131, 131);
@@ -87,7 +87,7 @@ nav{
     background-color: rgb(162, 157, 157);
     box-shadow: 3px 0px 8px 10px rgb(162, 157, 157);
     border-radius: 10px;
-    animation: moving-effect 1.5s linear infinite;
+    animation: moving-effect 1s linear infinite;
     z-index: 1;
 }
 /* .moving-effect {
