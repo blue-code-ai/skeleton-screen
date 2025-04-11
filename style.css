@@ -18,7 +18,7 @@ nav{
     left: 2dvw;
     border-radius: 12.5px;
     background-color: rgb(71, 69, 69);
-    animation: glow-effect 1.5s linear 0s infinite;
+    animation: glow-effect 1s linear 0s infinite;
 }
 #nav-bar::after{
     content: "";
@@ -28,7 +28,7 @@ nav{
     left: 10dvw;
     border-radius: 10px;
     background-color: rgb(71, 69, 69);
-    animation: glow-effect 1.5s linear 0s infinite;
+    animation: glow-effect 1s linear 0s infinite;
 }
 #container{
     display: grid;
